@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <p id="pessoal">PORTIFÓLIO PESSOAL</p>
+    </header>
+    
+    <nav> <!--Barra de navegação do site -->
+       <ul class="navegacao">
+        <li class="separar"><a href="index.html">Sobremim</a></li>
+        <li class="separar"><a href="formação.html">Formação</a></li>
+        <li class="separar"><a href="portifolio.html">Portifólio</a></li>
+        <li class="separar"><a href="contato.html">Contato</a></li>
+       </ul>
+    </nav>
+ 
+       
+        <h2>Portifólio</h2>
+
+        <br>
+        <h3 style="text-align: center;">Programa de sorveteira em phython</h3>
+        <p class="texto"> <!-- Paragrafo com o portifolio -->
+            print('Bem-vindo a sorveteria do Arthur Evaldo Trevia Guimarães') <br>
+            print('--------------------CARDÁPIO----------------------') <br>
+            print('------| Tamanho | Cupuaçu (CP) | Açaí (AC) |------') <br>
+            print('------|    P    |   R$10,00    |  R$12,00  |------')<br>
+            print('------|    M    |   R$15,00    |  R$17,00  |------')<br>
+            print('------|    G    |   R$19,00    |  R$21,00  |------')<br>
+            acumulador = 0 #variável com valor inicial para somar o preço dos produtos<br>
+            while True:<br>
+                sabor = input('Entre com o sabor desejado (CP/AC):')<br>
+                sabor = sabor.upper() #deixa a resposta padronizada como upper<br>
+                if sabor != 'CP' and sabor != 'AC' and sabor != 'cp' and sabor != 'ac':<br>
+                    print('Sabor inválido. Digite o sabor corretamente!')<br>
+                    continue<br>
+            
+                tamanho = input('Entre com o tamanho desejado (P/M/G):')<br>
+                tamanho = tamanho.upper() #deixa a resposta padronizada como upper<br>
+                if tamanho != 'P' and tamanho != 'M' and tamanho != 'G' and tamanho != 'p' and tamanho != 'm' and tamanho != 'g':<br>
+                    print('Tamanho inválido. Digite o tamanho corretamente!')<br>
+                    continue<br>
+                if sabor == 'CP' and tamanho == 'P':<br>
+                    print('Você escolheu o sabor Cupuaçu de tamanho Pequeno!')<br>
+                    acumulador = acumulador + 10<br>
+                    
+            
+                elif sabor == 'CP' and tamanho == 'M':<br>
+                    print('Você escolheu o sabor Cupuaçu de tamanho M!')<br>
+                    acumulador = acumulador + 15<br>
+            
+            
+                elif sabor == 'CP' and tamanho == 'G':<br>
+                    print('Você escolheu o sabor Cupuaçu de tamanho G!')<br>
+                    acumulador = acumulador + 19<br>
+            
+            
+                elif sabor == 'AC' and tamanho == 'P':<br>
+                    print('Você escolheu o sabor Açaí de tamanho P!')<br>
+                    acumulador = acumulador + 12<br>
+            
+                elif sabor == 'AC' and tamanho == 'M':<br>
+                    print('Você escolheu o sabor Açaí de tamanho M!')<br>
+                    acumulador = acumulador + 17<br>
+            
+            
+                elif sabor == 'AC' and tamanho == 'G':<br>
+                    print('Você escolheu o sabor Açaí de tamanho G!')<br>
+                    acumulador = acumulador + 21<br>
+            
+                pedir_mais = input('Deseja pedir mais alguma coisa (S/outra tecla)?')<br>
+                pedir_mais = pedir_mais.upper()<br>
+                if pedir_mais == 'S':<br>
+                    continue #continua o programa caso digite S para pedir mais coisas<br>
+                else: print('O valor a ser pago é de:R${:.2f}'.format(acumulador))<br>
+                break #encerra o programa caso digite outra tecla diferente de S<br>
+            </p>
